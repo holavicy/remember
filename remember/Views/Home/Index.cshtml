@@ -1,0 +1,25 @@
+﻿
+@model remember.ViewModels.HomeViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>列表</h1>
+@foreach (var noodle in Model.Noodles)
+{
+    <div>
+        <h2>@noodle.Name</h2>
+        <h3>¥@noodle.Price</h3>
+        <p>@noodle.LongDescription</p>
+    </div>
+}
+<h1>评论</h1>
+@foreach (var feedback in Model.Feedbacks)
+{
+    <div>
+        <h2>@feedback.Name</h2>
+        <h3>@feedback.Email</h3>
+        <p>@feedback.Message</p>
+    </div>
+}
+

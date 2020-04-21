@@ -1,0 +1,24 @@
+﻿@model remember.Models.Feedback
+@{
+    ViewData["Title"] = "Index";
+}
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h1>评价</h1>
+
+<form asp-action="Index" method="post">
+
+    <div asp-validation-summary="All"></div>
+
+    <input asp-for="Name" type="text" placeholder="请输入姓名" />
+    <span asp-validation-for="Name"></span>
+
+    <input asp-for="Email" type="text" placeholder="请输入邮箱" />
+    <span asp-validation-for="Email"></span>
+
+    <input asp-for="Message" type="text" placeholder="请输入评价" />
+    <span asp-validation-for="Message"></span>
+    <button type="reset" value="重置">重置</button>
+    <button type="submit" value="提交">提交</button>
+</form>
