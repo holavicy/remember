@@ -13,5 +13,6 @@ namespace remember.Models
         public string LongDescription { get; set; }
         public decimal Price { get; set; }
         public string ImageURL { get; set; }
+        public bool IsInStock { get; set; }
     }
 }

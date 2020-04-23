@@ -28,7 +28,7 @@ namespace remember
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllersWithViews();
             services.AddTransient<INoodleRepository, NoodleRepository>();
-            services.AddTransient<IFeedbackRepository, MockFeedbackRepository>();
+            services.AddTransient<IFeedbackRepository, FeedbackRepository>();
 
         }
 
